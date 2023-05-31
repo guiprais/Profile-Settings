@@ -60,23 +60,33 @@ export const Container = styled.main`
       .sectionBody {
         display: flex;
         flex-direction: column;
-        gap: 8px;
-
         .button,
         .exitButton {
           display: flex;
           align-items: center;
           justify-content: space-between;
 
+          padding: 8px 0;
+
           > div {
             display: flex;
             align-items: center;
             gap: 8px;
+
+            p {
+              font-size: 16px;
+              line-height: 20px;
+              color: ${({ theme }) => theme.colors.gray[100]};
+            }
           }
         }
 
         .exitButton {
           color: ${({ theme }) => theme.colors.red};
+
+          p {
+            color: ${({ theme }) => theme.colors.red} !important;
+          }
         }
       }
     }
